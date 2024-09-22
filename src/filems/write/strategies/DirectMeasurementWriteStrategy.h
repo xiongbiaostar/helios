@@ -78,7 +78,8 @@ protected:
             << m.pulseReturnNumber << " "
             << m.fullwaveIndex << " "
             << m.hitObjectId << " "
-            << m.classification << " "
+            << m.classification << "-"
+            << m.legIdx << "-"
             << std::setprecision(9) << std::fixed
             << m.gpsTime / 1000000000.0 << std::endl;
 

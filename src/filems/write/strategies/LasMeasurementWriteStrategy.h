@@ -165,13 +165,14 @@ protected:
         lp.set_number_of_returns(U8(m.pulseReturnNumber));
         lp.set_extended_number_of_returns(U8(m.pulseReturnNumber));
 
-        lp.set_classification(U8(m.classification) & CLASSIFICATION_MASK);
-        lp.set_extended_classification(U8(m.classification) & CLASSIFICATION_MASK);
-
+        lp.set_classification(m.legIdx);
+        lp.set_extended_classification(m.legIdx);
+        lp.set_point_source_ID(U16(m.legIdx+'0'));
         lp.set_gps_time(F64((m.gpsTime)/1000000000.0));
         
         // Populate LAS point (extra bytes attributes)
         lp.set_attribute(ewAttrStart, F64(m.echo_width));
+        lp.set_attribute(fwiAttrStart, I32(1));
         lp.set_attribute(fwiAttrStart, I32(m.fullwaveIndex));
         lp.set_attribute(hoiAttrStart, I32(std::stoi(m.hitObjectId)));
         lp.set_attribute(ampAttrStart, F64(m.intensity));

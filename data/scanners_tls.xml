@@ -8,8 +8,8 @@
 	<scanner 	id 							= "riegl_vz400"
 				name              			= "RIEGL VZ-400"
 				accuracy_m					= "0.005"
-			 	beamDivergence_rad 			= "0.0003"
-				headRotatePerSecMax_deg		= "60"
+			 	beamDivergence_rad 			= "0.0003" 
+				headRotatePerSecMax_deg		= "60" 
 				
 				optics            			= "rotating"
 				pulseFreqs_Hz				= "100000,300000"
@@ -17,7 +17,7 @@
 				rangeMin_m					= "1.5"
 				scanAngleMax_deg   			= "120"
 				scanAngleEffectiveMax_deg   = "50"
-				scanFreqMin_Hz				= "3"
+				scanFreqMin_Hz				= "3" 
 				scanFreqMax_Hz				= "120">
 		
 		<FWFSettings beamSampleQuality="3"/>	
@@ -612,8 +612,85 @@
 		<headRotateAxis x="0" y="0" z="1"/>
 	</scanner>
 	<!-- ##### END Panoramic scanner ##### -->
-
+	
+	<scanner 	id 							= "panoscanner2"
+				name              			= "PANO"
+				accuracy_m					= "0.005"
+			 	beamDivergence_rad 			= "0.0003"
+				headRotatePerSecMax_deg		= "500"
+				optics            			= "rotating"
+				pulseFreqs_Hz				= "100000,300000"
+				pulseLength_ns     			= "5"
+				rangeMin_m					= "0.01"
+				scanAngleMax_deg   			= "180"
+				scanAngleEffectiveMax_deg   = "180"
+				scanFreqMin_Hz				= "0"
+				scanFreqMax_Hz				= "12000"
+	>
+		<FWFSettings beamSampleQuality="3"/>	
+		<beamOrigin x="0" y="0" z="0.2">
+			<rot axis="y" angle_deg="0" />
+			<rot axis="z" angle_deg="0" />
+			<rot axis="x" angle_deg="90" />
+		</beamOrigin>
+		<headRotateAxis x="0" y="0" z="1"/>
+	</scanner>
 	<!-- ############### END "Fantasy" Scanners ############### -->
 
-
+	<scanner 	id 							= "panoscanner1"
+			name              			= "PANO1"
+			accuracy_m					= "0.005"
+			beamDivergence_rad 			= "0.0003"
+			headRotatePerSecMax_deg		= "500"
+			
+			optics            			= "rotating"
+			pulseFreqs_Hz				= "100000,300000"
+			pulseLength_ns     			= "5"
+			rangeMin_m					= "0.01"
+			scanAngleMax_deg   			= "180"
+			scanAngleEffectiveMax_deg   = "150"
+			scanFreqMin_Hz				= "0"
+			scanFreqMax_Hz				= "12000"
+			verticalAngleMin_deg		= "-60"
+			verticalAngleMax_deg		= "240"
+			>
+		
+		<FWFSettings beamSampleQuality="3"/>	
+		<beamOrigin x="0" y="0" z="0.2">
+			<rot axis="y" angle_deg="0" />
+			<rot axis="z" angle_deg="0" />
+			<rot axis="x" angle_deg="90" />
+		</beamOrigin>
+		<headRotateAxis x="0" y="0" z="1"/>
+		
+	</scanner>
+	
+	<scanner 	id 							= "faroFM70"
+				name              			= "FARO Focus M 70"
+				accuracy_m					= "0.003"
+			 	beamDivergence_rad 			= "0.0003"
+				headRotatePerSecMax_deg		= "500"
+				optics            			= "rotating"
+				pulseFreqs_Hz				= "600000"
+				pulseLength_ns     			= "5"
+				rangeMin_m					= "0.1"
+				rangeMax_m 					= "70.0"
+				scanAngleMax_deg   			= "180"
+				scanAngleEffectiveMax_deg   = "150"
+				verticalAngleMin_deg		= "-60"
+				verticalAngleMax_deg		= "240"
+				scanFreqMin_Hz				= "0"
+				scanFreqMax_Hz				= "150"
+				wavelength_nm 			  	= "1550"
+	>
+		<FWFSettings beamSampleQuality="3"/>	
+		<beamOrigin x="0" y="0" z="0.2">
+			<rot axis="y" angle_deg="0" />
+			<rot axis="z" angle_deg="0" />
+			<rot axis="x" angle_deg="90" />
+		</beamOrigin>
+		<headRotateAxis x="0" y="0" z="1"/>
+	</scanner>
+	
+	
 </document>

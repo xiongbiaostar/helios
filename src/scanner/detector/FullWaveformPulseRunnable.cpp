@@ -619,7 +619,7 @@ void FullWaveformPulseRunnable::digestFullWaveform(
         tmp.returnNumber = numReturns + 1;
         tmp.classification = classification;
         tmp.gpsTime = pulse.getTime();
-
+        tmp.legIdx = pulse.getLegIndex();
         pointsMeasurement.push_back(tmp);
         ++numReturns;
 #if DATA_ANALYTICS >= 2

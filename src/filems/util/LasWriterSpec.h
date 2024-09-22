@@ -170,7 +170,7 @@ public:
         ewAttrStart = lws.ewAttrStart;
         fwiAttrStart = lws.fwiAttrStart;
         hoiAttrStart = lws.hoiAttrStart;
-        ampAttrStart = lws.ampAttrStart;
+        ampAttrStart = lws.ampAttrStart; 
     }
     virtual ~LasWriterSpec() = default;
 
@@ -252,6 +252,7 @@ public:
             I32 fwiType = 5; // int
             I32 hoiType = 5; // int
             I32 ampType = 9; // double
+            I32 scanerType = 5;
             LASattribute ewAttr(
                 ewType,
                 "echo_width",

@@ -72,6 +72,7 @@ public:
 	 */
 	double gpsTime;
 
+	int legIdx;
 
 	// ***  CONSTRUCTION / DESTRUCTION  *** //
 	// ************************************ //
@@ -94,6 +95,7 @@ public:
 	    fullwaveIndex = m.fullwaveIndex;
 	    classification = m.classification;
 	    gpsTime = m.gpsTime;
+		legIdx = m.legIdx;
 	}
 	virtual ~Measurement() = default;
 
@@ -105,7 +107,7 @@ public:
 	        << m.intensity << "," << m.echo_width << ","
 	        << m.returnNumber << "," << m.pulseReturnNumber << ","
 	        << m.fullwaveIndex << "," << m.classification << ","
-	        << m.gpsTime;
+	        << m.gpsTime ;
 	    return out;
 	}
 };
