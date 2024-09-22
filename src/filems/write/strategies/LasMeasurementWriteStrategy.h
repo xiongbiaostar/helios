@@ -79,6 +79,9 @@ protected:
      */
     I32 const &ampAttrStart;
 
+
+
+
 public:
     // ***  CONSTRUCTION / DESTRUCTION  *** //
     // ************************************ //
@@ -166,7 +169,7 @@ protected:
         lp.set_extended_classification(U8(m.classification) & CLASSIFICATION_MASK);
 
         lp.set_gps_time(F64((m.gpsTime)/1000000000.0));
-
+        
         // Populate LAS point (extra bytes attributes)
         lp.set_attribute(ewAttrStart, F64(m.echo_width));
         lp.set_attribute(fwiAttrStart, I32(m.fullwaveIndex));

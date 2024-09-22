@@ -71,6 +71,7 @@ protected:
         ss  << shifted.x << " "
             << shifted.y << " "
             << shifted.z << " "
+           
             << m.intensity << " "
             << m.echo_width << " "
             << m.returnNumber << " "
@@ -80,6 +81,7 @@ protected:
             << m.classification << " "
             << std::setprecision(9) << std::fixed
             << m.gpsTime / 1000000000.0 << std::endl;
+
         return ss.str();
     }
 };

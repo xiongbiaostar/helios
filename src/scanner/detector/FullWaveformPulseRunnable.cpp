@@ -542,6 +542,7 @@ void FullWaveformPulseRunnable::digestFullWaveform(
     std::unordered_set<std::size_t> capturedIndices;
 #endif
 
+    // std::cout << "legindxΪ" << pulse.getLegIndex() << std::endl;
     for (int i = 0; i < numFullwaveBins; ++i) {
         // Skip iteration if the handling of the bin_i does not accept the hit
         if(handleFullWaveformBin(
@@ -603,6 +604,8 @@ void FullWaveformPulseRunnable::digestFullWaveform(
         }
 
         // Build measurement
+
+
         Measurement tmp;
         tmp.devIdx = devIdx;
         tmp.devId = scanner->getDeviceId(devIdx);
